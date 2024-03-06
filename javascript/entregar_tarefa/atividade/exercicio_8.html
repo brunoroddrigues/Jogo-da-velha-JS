@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício_8</title>
+</head>
+<body>
+    <script>
+        function pesoIdeal(altura, sexo)
+        {
+            var pesoIdeal;
+            if(sexo === "masculino")
+            {
+                pesoIdeal = 72.7 * altura - 58;
+            }
+            else if(sexo ==="feminino")
+            {
+                pesoIdeal = 62.1 * altura - 44.7;
+            }
+            return pesoIdeal;
+        }
+
+        var altura = prompt("Digite sua altura");
+
+        do{
+            var sexo = prompt("Digite seu sexo");
+        }while(sexo != "masculino" && sexo != "feminino");
+
+        var pesoIdeal = pesoIdeal(altura, sexo);
+        alert('Seu peso ideal é: ' + pesoIdeal.toFixed(2) + ' kg.');
+    </script>
+</body>
+</html>

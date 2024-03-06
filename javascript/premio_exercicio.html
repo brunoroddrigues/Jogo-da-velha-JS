@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+         <meta charset="UTF-8">
+         <title>premio</title>
+    </head>
+    <body>
+        <script>
+            //ENTRADAS
+            var premio = prompt("digite o valor do premio");
+            var premio_1 = parseInt(prompt("digite os pontos do primeiro  colocado"));
+            var premio_2 = parseInt(prompt("digite os pontos do segundo  colocado"));
+            var premio_3 = parseInt(prompt("digite os pontos do terceiro  colocado"));
+
+            //PROCESSAMENTO
+
+            var r1 = premio * premio_1/(premio_1 + premio_2 + premio_3);
+            var r2 = premio * premio_2/(premio_1 + premio_2 + premio_3);
+            var r3 = premio * premio_3/(premio_1 + premio_2 + premio_3);
+
+            //SAIDAS
+            alert(r1);
+            alert(r2);
+            alert(r3)
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício_6</title>
+</head>
+<body>
+    <script>
+        var n1 = prompt("1-Digite um numero");
+        do
+        {
+            var n2 = prompt("2-Digite um numero");   
+        }while(n2 == n1);
+        do
+        {
+            var n3 = prompt("3-Digite um numero");  
+        }while(n3 == n1 || n3 == n2);
+        
+        
+        var maior = n1, menor = n1;
+
+        if(menor > n2) menor = n2;
+        if(menor > n3) menor = n3;
+        if(maior < n2) maior = n2;
+        if(maior < n3) maior = n3;
+
+        alert("O menor numero é: " + menor + "\ne o maior numero é: " + maior);
+    </script>
+</body>
+</html>

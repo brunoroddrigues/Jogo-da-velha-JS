@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício_3</title>
+</head>
+<body>
+    <script>
+        var vCusto = prompt("Digite o valor de custo");
+        var vVenda = prompt("Digite o valor de venda"); 
+        var lucro = vVenda - vCusto;
+
+        if(lucro < vCusto * 0.1)
+        {
+            alert("Baixo lucro");
+        }
+        else if(lucro >= vCusto * 0.1 && lucro <= vCusto * 0.2){
+            alert("Lucro médio");
+        }
+        else
+        {
+            alert("Lucro alto");
+        }
+    
+    </script>
+</body>
+</html>

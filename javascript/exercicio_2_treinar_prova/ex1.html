@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{color: red;}
+        #erro{color: red;}
+    </style>
+</head>
+<body>
+    <h1>qual a velocidade que esta</h1>
+    <h2 id="resultado"></h2>
+    <label>velocidade que dirige</label>
+    <input type="text" id="velocidade">
+    <div id="erro"></div>
+    <br><br>
+
+    <button onclick="verificar()">verificar</button>
+
+    <script>
+        function verificar()
+        {
+            document.getElementById("erro").value
+            document.getElementById("resultado").value
+            var velocidade = document.getElementById("velocidade").value
+            if(velocidade =="")
+            {
+                document.getElementById("erro").innerHTML = "preencha a velocidade";
+            }
+            else
+            {
+                var mensagem = "";
+                if(velocidade > 150)
+                {
+                    mensagem = "voce esta preste a causar um grande acidente";
+                }
+                else if(velocidade > 120)
+                {
+                    mensagem = "voce esta preste a causar um problema";
+                }
+                else if(velocidade > 80)
+                {
+                    mensagem = "cuidado pra nao ultrapassar o limite de velocidade";
+                }
+                else if(velocidade > 45)
+                {
+                    mensagem = "esta na velocidade ideal, continue assim";
+                }
+                else
+                {
+                    mensagem = "esta muito lento";
+                }
+                document.getElementById("resultado").innerHTML = mensagem;
+            }
+        }
+    </script>
+</body>
+</html>

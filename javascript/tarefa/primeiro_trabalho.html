@@ -1,0 +1,22 @@
+<!doctype html> 
+<html>
+    <head>
+         <meta charset="UTF-8">
+         <title>primeiro getElementoById</title>
+    </head>
+    <body>
+		<h1>Acenda a lampada</h1>
+		<img src = "lampada_apagada.jpg" id="imagem"/>
+		<br><button onclick="acender()">Acender</button>
+		<script>
+		function acender()
+		{
+		 document.getElementById("imagem").src = 
+		"lampada_acesa.jpg";
+		
+		document.getElementById("imagem").title=
+		"acesa"
+		}
+		</script>
+    </body>
+</html>

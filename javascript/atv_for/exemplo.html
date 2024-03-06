@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Bruno</title>
+</head>
+<body>
+    <h1>Loja Bruno</h1>
+    <br>
+    <h3>Luva muay thai:</h3>
+    <br>
+    <img src="imagem_1.jpg">
+    <br><br>
+    <label>Aumento(%):</label>
+    <input type="number" min="0">
+    <br><br>
+    <h3>Protetor bucal:</h3>
+    <br>
+    <img src="imagem_2.jpg">
+    <br><br>
+    <label>Aumento(%):</label>
+    <input type="number" min="0">
+    <br><br>
+    <h3>Luva muay thai feminina:</h3>
+    <br>
+    <img src="luva_feminina.jpg">
+    <br><br>
+    <label>Aumento(%)</label>
+    <input type="number" min="0">
+    <br><br>
+
+    <button onclick="Calcular()">Calcular</button>
+
+    <br><br>
+    <div id="d1"></div>
+
+    <script>
+        var precos = [200.00, 79.99, 229.99];   //aumento é uma lista de input 
+        function Calcular()
+        {
+            var mensagem = "<h1>Aumentos</h1><br>";
+            var Aumento = document.getElementsByTagName("input");
+            for(var x=0; x<Aumento.length; x++)   //aumento.lenght é a qtd de elementos que tem no vetor 
+            {
+                var novo_valor = precos[x] + (precos[x] * Aumento[x].value / 100);
+                mensagem = mensagem + "<h2>" + (x+1) + ": " + novo_valor + "</h2>";   //<h2> dps da mensagem vai deixar em negrito 
+            } 
+            document.getElementById("d1").innerHTML = mensagem
+        }// fim da função
+    </script>
+</body>
+</html>

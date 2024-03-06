@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio_2</title>
+</head>
+<body>
+    <h1>velocidade em que costuma dirigir</h1>
+
+    <h2 id="mensagem"></h2>
+
+    <label for="qual a velocidade que costuma dirigir "></label>
+    <input type="text" id="velocidade" required>
+    <br><br>
+
+
+    <button onclick="calcule()">calcular</button>
+
+    <script>
+       
+       
+        function calcule()
+        {
+            var velocidade = document.getElementById("velocidade").value
+            
+            
+           
+            if(velocidade > 150)
+            {
+                mensagem = "voce esta preste a causar um grande problema";
+            }
+            else if(velocidade > 120 && velocidade <=150)
+            {
+                mensagem = "voce esta preste a causar um problema";
+            }
+            else if(velocidade > 80 && velocidade <=120)
+            {
+                mensagem = "cuidado para ultrapassar o limite de velocidade";
+            }
+            else if(velocidade > 45 && velocidade <=80)
+            {
+                mensagem = "continue assim, devagar sempre";
+            }
+            else
+            {
+                mensagem = "voce é uma tartaruga";
+            }
+            document.getElementById("mensagem").innerHTML = mensagem;
+        }
+        
+    </script>
+</body>
+</html>
